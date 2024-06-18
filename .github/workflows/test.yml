@@ -1,0 +1,24 @@
+on:
+  push:
+    branches:
+      - main
+    pull_request:
+    merge_group:
+
+jobs:
+  sanity:
+    name: Check latest commit for sanity
+    runs-on: ubuntu-latest
+    env:
+      CARGO_TERM_COLOR: always
+      RUST_BACKTRACE: 0
+      ANNATTO_IN_MEMORY: true
+    steps:
+      - name: setup-binary-action
+        uses: plinioh/setup-binary-action@v1.0.0
+        with:
+          binaryName: annatto
+          binaryUrl: https://github.com/korpling/annatto/releases/download/v0.8.0/annatto-x86_64-unknown-linux-gnu.tar.xz
+          binaryPathInArchive: annatto-x86_64-unknown-linux-gnu/annatto
+      - name: run annatto
+        run: annatto run build.toml
