@@ -18,7 +18,7 @@ jobs:
         uses: plinioh/setup-binary-action@v1.0.0
         with:
           binaryName: annatto
-          binaryUrl: https://github.com/korpling/annatto/releases/download/v0.8.0/annatto-x86_64-unknown-linux-gnu.tar.xz
-          binaryPathInArchive: annatto-x86_64-unknown-linux-gnu/annatto
+          binaryUrl: https://github.com/MartinKl/actiorcise/blob/main/annatto.tar.gz
+          binaryPathInArchive: target/release/annatto
       - name: run annatto
         run: annatto run build.toml
