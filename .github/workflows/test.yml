@@ -20,5 +20,9 @@ jobs:
           binaryName: annatto
           binaryUrl: https://github.com/MartinKl/actiorcise/raw/main/annatto.tar.gz
           binaryPathInArchive: target/release/annatto
+      - name: debug details i
+        run: ls -lisah
+      - name: debug details ii
+        run: echo $PWD
       - name: run annatto
         run: annatto run build.toml
