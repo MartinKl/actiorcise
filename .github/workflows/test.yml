@@ -14,15 +14,13 @@ jobs:
       RUST_BACKTRACE: 0
       ANNATTO_IN_MEMORY: true
     steps:
+      - name: checkout repository
+        uses: actions/checkout@v4
       - name: setup-binary-action
         uses: plinioh/setup-binary-action@v1.0.0
         with:
           binaryName: annatto
           binaryUrl: https://github.com/MartinKl/actiorcise/raw/main/annatto.tar.gz
           binaryPathInArchive: target/release/annatto
-      - name: debug details i
-        run: ls .. -lisah
-      - name: debug details ii
-        run: echo $PWD
       - name: run annatto
-        run: annatto run ../build.toml
+        run: annatto run build.toml
