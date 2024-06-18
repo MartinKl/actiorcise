@@ -14,11 +14,11 @@
 </speakertable></head>
 <basic-body>
 <common-timeline>
-<tli id="T0"/>
-<tli id="T1"/>
-<tli id="T2"/>
-<tli id="T3"/>
-<tli id="T4"/>
+<tli id="T0" time="1.0"/>
+<tli id="T1" time="2.0"/>
+<tli id="T2" time="3.0"/>
+<tli id="T3" time="4.0"/>
+<tli id="T4" time="5.0"/>
 </common-timeline>
 <tier id="TIE0" speaker="SPK0" category="v" type="t" display-name="X [v]"><event start="T0" end="T1">this</event>
 <event start="T1" end="T2">is</event>
