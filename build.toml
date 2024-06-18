@@ -6,7 +6,7 @@ config = {}
 [[graph_op]]
 action = "check"
 
-[graph_op.config.tests]
+[[graph_op.config.tests]]
 query = "tok"
 expected = [1, inf]
 description = "There is at least one token"
