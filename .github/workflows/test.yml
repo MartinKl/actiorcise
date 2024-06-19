@@ -24,3 +24,5 @@ jobs:
           binaryPathInArchive: target/release/annatto
       - name: run annatto
         run: annatto run build.toml
+      - name: run annatto binary
+        run: ./annatto validate build.toml
